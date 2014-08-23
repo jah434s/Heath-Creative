@@ -22,4 +22,9 @@ class PagesController extends BaseController {
         return View::make('site/examples');
     }
 
+    public function about()
+    {
+        return View::make('site/about');
+    }
+
 }

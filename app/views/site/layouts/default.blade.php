@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<title>
 			@section('title')
-			{{ Config::get('site.company') }}
+			{{ Config::get('site.company') }} | 
 			@show
 		</title>
 		<meta name="keywords" content="" />
@@ -20,6 +20,11 @@
 		{{-- CSS
 		================================================== --}}
         <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+        {{-- Fonts
+        ================================================== --}}
+        <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
 		{{-- HTML5 shim, for IE6-8 support of HTML5 elements --}}

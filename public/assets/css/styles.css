@@ -1,6 +1,6 @@
 html {
   font-size: 16px;
-  font-family: "Century Gothic", sans serif; }
+  font-family: "Noto Serif", serif; }
 
 body {
   min-width: 304px; }
@@ -17,10 +17,17 @@ a {
     background: #ddd; }
 
 h1, h2, h3, h4 {
-  color: #4b5d00; }
+  color: #4b5d00;
+  font-family: "Century Gothic", sans serif; }
 
 h1 {
   margin-top: .4em; }
+
+h2 {
+  margin-bottom: .3em; }
+
+p, ul, ol {
+  margin-top: 0; }
 
 header {
   border-bottom: 2px solid #88aa00;
@@ -60,6 +67,7 @@ header {
 
 #tag-line {
   font-size: 5vw;
+  font-family: "Century Gothic", sans serif;
   padding: .3em 0 .6em;
   text-align: center;
   display: block;
@@ -72,14 +80,15 @@ header {
   transition: all .4s;
   overflow: hidden; }
   .main-nav.is-visible {
-    max-height: 8em;
+    max-height: 10em;
     padding: 1em 0; }
 
 .main-nav-item {
   display: block;
   padding: .4em .8em;
   font-size: 1.2em;
-  transition: background .4s; }
+  transition: background .4s;
+  font-family: "Century Gothic", sans serif; }
   .main-nav-item:hover {
     text-decoration: none;
     background: #eee; }

@@ -1,7 +1,7 @@
 <nav class="main-nav" data-toggle-name="main-nav">  
     @foreach($menu->all() as $item)
         @if(isset($item->link))
-            <a class="{{ (Request::is( $item->title ) ? 'main-nav-item is-current-page' : 'main-nav-item') }}" href="{{ $item->link }}">
+            <a class="{{ (Request::is( $item->route ) ? 'main-nav-item is-current-page' : 'main-nav-item') }}" href="{{ $item->link }}">
             {{ $item->title }} <i class="fa fa-chevron-right"></i>
             </a>
         @elseif(isset($item->menu))

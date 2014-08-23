@@ -99,6 +99,8 @@ Route::when('contact-us','detectLang');
 Route::get('/pricing', array('as' => 'pricing', 'uses' => 'PagesController@pricing'));
 Route::get('/testimonials', array('as' => 'testimonials', 'uses' => 'PagesController@testimonials'));
 Route::get('/examples', array('as' => 'examples', 'uses' => 'PagesController@examples'));
+Route::get('/about', array('as' => 'about', 'uses' => 'PagesController@about'));
+
 
 # Contact Us Static Page
 Route::get('contact-us', function()
