@@ -80,7 +80,7 @@ header {
   transition: all .4s;
   overflow: hidden; }
   .main-nav.is-visible {
-    max-height: 10em;
+    max-height: 13em;
     padding: 1em 0; }
 
 .main-nav-item {

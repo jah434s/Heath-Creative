@@ -2,7 +2,7 @@
 {{-- Web site Title --}}
 @section('title')
 @parent
-Services
+Pricing
 @stop
 
 {{-- Content --}}

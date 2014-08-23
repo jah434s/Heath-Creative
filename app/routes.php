@@ -100,6 +100,7 @@ Route::get('/pricing', array('as' => 'pricing', 'uses' => 'PagesController@prici
 Route::get('/testimonials', array('as' => 'testimonials', 'uses' => 'PagesController@testimonials'));
 Route::get('/examples', array('as' => 'examples', 'uses' => 'PagesController@examples'));
 Route::get('/about', array('as' => 'about', 'uses' => 'PagesController@about'));
+Route::get('/services', array('as' => 'services', 'uses' => 'PagesController@services'));
 
 
 # Contact Us Static Page

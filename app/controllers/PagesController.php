@@ -27,4 +27,9 @@ class PagesController extends BaseController {
         return View::make('site/about');
     }
 
+    public function services()
+    {
+        return View::make('site/services');
+    }
+
 }
