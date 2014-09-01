@@ -2,6 +2,23 @@
 
 class PagesController extends BaseController {
 
+    /**
+     * Service Model
+     * @var Service
+     */
+    protected $service;
+
+    /**
+     * Inject the models.
+     * @param Service $service
+     */
+    public function __construct(Service $service)
+    {
+        parent::__construct();
+
+        $this->service = $service;
+    }
+
     public function index()
     {
         return View::make('site/home');
@@ -29,7 +46,11 @@ class PagesController extends BaseController {
 
     public function services()
     {
-        return View::make('site/services');
+        // Get all the services
+        $services = $this->service->orderBy('created_at', 'DESC')->get();
+
+        // Show the page
+        return View::make('site/services', compact('services'));
     }
 
 }

@@ -4,8 +4,32 @@
 		"selected_items":
 		[
 			[
-				"margin",
+				"font",
+				"font-size"
+			],
+			[
+				"ser",
+				"services"
+			],
+			[
+				"margin-",
 				"margin-top"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"fon",
+				"font-family"
 			],
 			[
 				"paddi",
@@ -34,10 +58,6 @@
 			[
 				"padding",
 				"padding-bottom"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"border",
@@ -235,7 +255,7 @@
 			"file": "app/views/site/layouts/default.blade.php",
 			"settings":
 			{
-				"buffer_size": 2343,
+				"buffer_size": 2662,
 				"line_ending": "Windows"
 			}
 		},
@@ -243,7 +263,7 @@
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 4285,
+				"buffer_size": 4457,
 				"line_ending": "Windows"
 			}
 		},
@@ -251,7 +271,15 @@
 			"file": "app/controllers/PagesController.php",
 			"settings":
 			{
-				"buffer_size": 407,
+				"buffer_size": 577,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/site/about.blade.php",
+			"settings":
+			{
+				"buffer_size": 905,
 				"line_ending": "Windows"
 			}
 		},
@@ -259,7 +287,7 @@
 			"file": "app/scss/styles.scss",
 			"settings":
 			{
-				"buffer_size": 1670,
+				"buffer_size": 1815,
 				"line_ending": "Windows"
 			}
 		},
@@ -283,15 +311,15 @@
 			"file": "app/viewComposers/NavigationViewComposer.php",
 			"settings":
 			{
-				"buffer_size": 2097,
+				"buffer_size": 2370,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/site/pricing.blade.php",
+			"file": "app/views/site/services.blade.php",
 			"settings":
 			{
-				"buffer_size": 163,
+				"buffer_size": 779,
 				"line_ending": "Windows"
 			}
 		},
@@ -304,10 +332,18 @@
 			}
 		},
 		{
+			"file": "app/views/site/pricing.blade.php",
+			"settings":
+			{
+				"buffer_size": 162,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app/scss/_variables.scss",
 			"settings":
 			{
-				"buffer_size": 156,
+				"buffer_size": 185,
 				"line_ending": "Windows"
 			}
 		}
@@ -315,9 +351,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 334.0,
+		"height": 357.0,
 		"selected_items":
 		[
+			[
+				"genear",
+				"Laravel Generate: Migration"
+			],
 			[
 				"serve",
 				"Laravel Artisan: Serve"
@@ -464,6 +504,7 @@
 	},
 	"file_history":
 	[
+		"/C/Job/Heath Creative/Heath-Creative/readme.md",
 		"/C/Users/Josh/Desktop/Captain America - The First Avenger (2011)/My-Captain America The First Avenger 2011 DVDRip XviD-MAXSPEED.srt",
 		"/C/Job/Heath Creative/Heath Creative/app/scss/styles.scss",
 		"/C/Users/Josh/AppData/Roaming/Sublime Text 3/Packages/SassBeautify/SassBeautify.sublime-settings",
@@ -627,7 +668,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -636,15 +677,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2343,
+						"buffer_size": 2662,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2208,
-								2208
+								2305,
+								2309
 							]
 						],
 						"settings":
@@ -654,7 +695,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1431.0,
+						"translation.y": 783.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
@@ -666,15 +707,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4285,
+						"buffer_size": 4457,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3687,
-								3687
+								4050,
+								4050
 							]
 						],
 						"settings":
@@ -685,10 +726,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2082.0,
+						"translation.y": 2244.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -697,15 +738,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 407,
+						"buffer_size": 577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								211,
-								211
+								516,
+								516
 							]
 						],
 						"settings":
@@ -716,7 +757,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 243.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -724,27 +765,29 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/scss/styles.scss",
+					"file": "app/views/site/about.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1670,
+						"buffer_size": 905,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1059,
-								1059
+								522,
+								522
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+							"auto_name": "",
+							"is_xml": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1800.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -752,6 +795,35 @@
 				},
 				{
 					"buffer": 5,
+					"file": "app/scss/styles.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								416,
+								416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "app/views/site/shared/navigation.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -763,8 +835,8 @@
 						"selection":
 						[
 							[
-								302,
-								302
+								172,
+								172
 							]
 						],
 						"settings":
@@ -778,11 +850,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "public/assets/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -808,24 +880,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "app/viewComposers/NavigationViewComposer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2097,
+						"buffer_size": 2370,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								451,
-								451
+								769,
+								769
 							]
 						],
 						"settings":
@@ -835,28 +907,28 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 172.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "app/views/site/pricing.blade.php",
+					"buffer": 9,
+					"file": "app/views/site/services.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 163,
+						"buffer_size": 779,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								150,
-								150
+								180,
+								180
 							]
 						],
 						"settings":
@@ -868,11 +940,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "app/scss/_mixins.scss",
 					"semi_transient": false,
 					"settings":
@@ -896,24 +968,53 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "app/scss/_variables.scss",
+					"buffer": 11,
+					"file": "app/views/site/pricing.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 156,
+						"buffer_size": 162,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								43,
-								43
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/scss/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
 							]
 						],
 						"settings":
@@ -924,7 +1025,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
