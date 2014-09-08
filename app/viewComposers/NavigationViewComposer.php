@@ -22,6 +22,8 @@ class NavigationViewComposer {
 
     $menu->push((object)['title' => 'Services', 'route' => 'services', 'link' => URL::to('services')]);
 
+    $menu->push((object)['title' => 'Contact', 'route' => 'contact', 'link' => URL::to('contact')]);
+
     /*
     |------------------------------------------------------------------------
     | Define the first sub menu

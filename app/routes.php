@@ -94,20 +94,26 @@ Route::controller('user', 'UserController');
 //:: Application Routes ::
 
 # Filter for detect language
-Route::when('contact-us','detectLang');
+Route::when('contact','detectLang');
 
 Route::get('/pricing', array('as' => 'pricing', 'uses' => 'PagesController@pricing'));
 Route::get('/testimonials', array('as' => 'testimonials', 'uses' => 'PagesController@testimonials'));
 Route::get('/examples', array('as' => 'examples', 'uses' => 'PagesController@examples'));
 Route::get('/about', array('as' => 'about', 'uses' => 'PagesController@about'));
 Route::get('/services', array('as' => 'services', 'uses' => 'PagesController@services'));
+Route::get('/contact', array('as' => 'contact', 'uses' => 'PagesController@contact'));
 
+Route::post('contact', function() {
 
-# Contact Us Static Page
-Route::get('contact-us', function()
-{
-    // Return about us page
-    return View::make('site/contact-us');
+    $replyTo = Input::get('email');
+    $email = 'josh@heath-creative.com';
+    $data = array('text' => Input::get('message'), 'requester' => $replyTo);
+    $subject = 'Contact Submission - '.$replyTo;
+    
+    Mail::send('emails.contact', $data, function($message) use ($email, $data, $subject, $replyTo){
+        $message->to($email)->from($email)->subject($subject)->replyTo($replyTo);
+    });
+
 });
 
 # Posts - Second to last set, match slug

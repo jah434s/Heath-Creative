@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'contact_us' => 'Contact Us',
-        'sign_up' => 'Sign Up',
+	'contact' => 'Contact',
+    'sign_up' => 'Sign Up',
 
 );

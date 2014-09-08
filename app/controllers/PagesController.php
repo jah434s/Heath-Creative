@@ -53,4 +53,9 @@ class PagesController extends BaseController {
         return View::make('site/services', compact('services'));
     }
 
+    public function contact()
+    {
+        return View::make('site/contact');
+    }
+
 }
