@@ -11,7 +11,7 @@
 		</title>
 		<meta name="keywords" content="" />
 		<meta name="author" content="Josh Heath" />
-		<meta name="description" content="Heath Creative provides expert quality custom websites at affordable prices." />
+		<meta name="description" content="{{ Config::get('site.company') }} provides expert quality custom websites at affordable prices." />
 
 		{{-- Mobile Specific Metas
 		================================================== --}}
@@ -50,10 +50,10 @@
 				<i class="fa fa-bars"></i>
 				<span>menu</span>
 			</button>
-			<span id="tag-line">Professional, Affordable Websites.</span>
+			<!--<span id="tag-line">Professional, Affordable Websites.</span>-->
 			@include('site/shared/navigation')
 		</header>
-		<main>
+		<main data-page="">
 			
 			@include('notifications')
 
@@ -61,9 +61,10 @@
 
 		</main>
 		<footer>
-			
+			<small>&copy;{{date('Y')}} {{Config::get('site.company')}}. All rights reserved.</small>
 		</footer>
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="{{asset('assets/js/main.js')}}"></script>
+		<script src="{{asset('assets/js/velocity.min.js')}}"></script>
 	</body>
 </html>

@@ -14,13 +14,11 @@ class NavigationViewComposer {
 
     $menu->push((object)['title' => 'Examples', 'route' => 'examples', 'link' => URL::to('examples')]);
 
-    $menu->push((object)['title' => 'Pricing', 'route' => 'pricing', 'link' => URL::to('pricing')]);
-
-    $menu->push((object)['title' => 'Testimonials', 'route' => 'testimonials', 'link' => URL::to('testimonials')]);
+    /*$menu->push((object)['title' => 'Testimonials', 'route' => 'testimonials', 'link' => URL::to('testimonials')]);*/
 
     $menu->push((object)['title' => 'About', 'route' => 'about', 'link' => URL::to('about')]);
 
-    $menu->push((object)['title' => 'Services', 'route' => 'services', 'link' => URL::to('services')]);
+    $menu->push((object)['title' => 'Services & Pricing', 'route' => 'services', 'link' => URL::to('services')]);
 
     $menu->push((object)['title' => 'Contact', 'route' => 'contact', 'link' => URL::to('contact')]);
 

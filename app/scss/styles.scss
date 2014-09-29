@@ -8,13 +8,17 @@ html {
 
 body {
 	min-width: 304px;
+	max-width: 1330px;
+	@media (min-width: 1330px) {
+		margin: 8px auto;
+	}
 }
 
 a {
-	color: $secondary;
+	color: lighten($accent, 10%);
 	text-decoration: none;
 	&:visited {
-		color: $secondary;
+		color: lighten($accent, 10%);
 	}
 	&:hover {
 		text-decoration: underline;
@@ -26,26 +30,128 @@ a {
 }
 
 h1, h2, h3, h4 {
-	color: $primary;
 	font-family: $sans;
+	margin-top: 0;
 }
 
 h1 {
 	margin-top: .4em;
 	font-size: 1.8em;
+	color: $primary;
+	text-align: center;
+	@media (min-width: $navSwitch1) {
+		font-size: 2.4em;
+	}
+	@media (min-width: $navSwitch2) {
+		font-size: 3em;
+		text-align: left;
+	}
 }
 
 h2 {
 	margin-bottom: .3em;
+	font-size: 1.4em;
+	color: $secondary;
 }
 
 p, ul, ol {
 	margin-top: 0;
 }
 
+p {
+	line-height: 1.6em;
+	max-width: 38em;
+}
+
+button {
+	cursor: pointer;
+}
+
+.primary-button {
+	padding: .6em;
+	font-family: $sans;
+	background: $accent;
+	border: 1px solid $accent2;
+	border-radius: 3px;
+	color: white;
+	font-size: 1.2em;
+	display: inline-block;
+	&:hover {
+		background: lighten($accent, 10%);
+		text-decoration: none;
+	}
+	&:active {
+		background: $accent2;
+	}
+	&:visited {
+		color: white;
+	}
+}
+
+.alert {
+	padding: .6em;
+	border: 1px solid;
+	border-radius: 3px;
+	margin-top: 1em;
+	max-width: 600px;
+	i {
+		font-size: 1.8em;
+		margin-right: .2em;
+		vertical-align: middle;
+	}
+	
+}
+
+.alert-heading {
+	font-size: 1.6em;
+	margin-bottom: .3em;
+}
+
+.alert-close {
+	background: transparent;
+	border:0;
+	font-size: 2em;
+	line-height: .5em;
+	float: right;
+}
+
+.success {
+	background: $successLight;
+	border-color: $successDark;
+	i, .alert-close, .alert-heading {
+		color: $successDark;
+	}
+}
+
+.warning {
+	background: $warningLight;
+	border-color: $warningDark;
+	i, .alert-close, .alert-heading {
+		color: $warningDark;
+	}
+}
+
+.error {
+	background: $errorLight;
+	border-color: $errorDark;
+	i, .alert-close, .alert-heading {
+		color: $errorDark;
+	}
+}
+
+.info {
+	background: $infoLight;
+	border-color: $infoDark;
+	i, .alert-close, .alert-heading {
+		color: $infoDark;
+	}
+}
+
 header {
-	border-bottom: 2px solid $secondary;
 	position: relative;
+	@media (min-width: $navSwitch2) {
+		border-bottom: 1px solid $secondary;
+	}
 }
 
 .logo {
@@ -69,7 +175,6 @@ header {
 	font-size: 1.8em;
 	background: transparent;
 	color: $secondary;
-	cursor: pointer;
 	&:hover {
 		background: #eee;
 	}
@@ -85,6 +190,9 @@ header {
 		font-size: .5em;
 		margin-top: -.4em;
 	}
+	@media (min-width: $navSwitch1) {
+		display: none;
+	}
 }
 
 #tag-line {
@@ -98,13 +206,26 @@ header {
 }
 
 .main-nav {
-	border-top: 2px solid $secondary;
+	border: 1px solid $secondary;
+	border-width: 1px 0;
 	max-height: 0;
 	transition: all .4s;
 	overflow: hidden;
 	&.is-visible {
-		max-height: 15em;
+		max-height: 11em;
 		padding: 1em 0;
+		border-width: 2px 0;
+	}
+	@media (min-width: $navSwitch1) {
+		max-height: initial;
+		text-align: center;
+	}
+	@media (min-width: $navSwitch2) {
+		font-size: 1em;
+		position: absolute;
+		top: 48px;
+		right: 0;
+		border: 0;
 	}
 }
 
@@ -114,6 +235,10 @@ header {
 	font-size: 1.2em;
 	transition: background .4s;
 	font-family: $sans;
+	color: $secondary;
+	&:visited {
+		color: $secondary;
+	}
 	&:hover {
 		text-decoration: none;
 		background: #eee;
@@ -132,19 +257,206 @@ header {
 	i {
 		font-size: .7em;
 	}
+	@media (min-width: $navSwitch1) {
+		display: inline-block;
+		& + .main-nav-item {
+			border-top: 0;
+			border-left: 1px solid #ccc;
+			margin-left: -.25em;
+		}
+		i {
+			display: none;
+		}
+	}
+	@media (min-width: $navSwitch2) {
+		display: inline-block;
+		& + .main-nav-item {
+			border-top: 0;
+			border-left: 1px solid #ccc;
+			margin-left: -.25em;
+		}
+		i {
+			display: none;
+		}
+	}
+}
+
+main {
+	padding: .5em .0 4em;
+	@extend %clearfix;
+}
+
+footer {
+	border-top: 1px solid $secondary;
+	padding: .5em 0;
+	text-align: center;
+}
+
+[data-accordion="toggle"] {
+	cursor: pointer;
+	&:before {
+		content: "\f067";
+		font-family: FontAwesome;
+		font-size: .7em;
+		margin-right: .4em;
+		vertical-align: middle;
+		position: relative;
+		top: -.05em;
+		.is-open & {
+			content: "\f068";
+		}
+	}
+}
+
+///////////////////
+// Home
+///////////////////
+.intro {
+	position: relative;
+	border: 1px solid #ccc;
+	margin: 0 0 1em;
+	overflow: hidden;
+	max-height: 2em;
+	padding: .5em .5em 0;
+	transition: max-height .4s;
+	border-radius: 4px;
+	&.is-open {
+		padding-bottom: 4em;
+		max-height: 11em;
+	}
+	/*
+	h2 {
+		color: white;
+	}
+	&:nth-child(2n) {
+		background: white;
+		h2 {
+			color: $secondary;
+		}
+	}
+	*/
+}
+
+.intro-cta {
+	font-size: 1em;
+	position: absolute;
+	bottom: .5em;
+	right: .5em;
+	transition: none;
+	transform: translate3d(-50em, 0, 0);
+	&:after {
+		content: "\f0da";
+		font-family: FontAwesome;
+		text-decoration: none;
+		padding-left: .2em;
+	}
+	.is-open & {
+		right: .5em;
+		transform: translate3d(0,0,0);
+		transition: transform .6s linear;
+	}
 }
 
 ///////////////////
 // Services
 ///////////////////
 
+.service {
+	padding: 0 1em 3.5em;
+	border: 1px solid $primary;
+	border-width: 0;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+	max-width: 35em;
+	& + .service {
+		padding-top: 2em;
+		border-width: 1px 0 0;
+	}
+
+	@media (min-width: $serviceSwitch) {
+		float: left;
+		width: 46%;
+		min-height: 16.25em;
+		margin: 0 2% 1.5em;
+		border-width: 0;
+		& + .service {
+			padding-top: 0;
+		}
+		&:nth-of-type(2n) {
+			//border-left-width: 1px;
+		}
+	}
+	@media (min-width: 70em) {
+		width: 29%;
+	}
+}
+
+.service-price-block {
+	position: absolute;
+	bottom: .5em;
+	right: .5em;
+}
+
 .service-price {
 	font-weight: bold;
 	color:	$primary;
 	font-size: 3em;
+	line-height: 1em;
 }
 
 .service-price-unit {
 	font-size: 1.5em;
 	font-style: italic;
+}
+
+.service-promise {
+	display: none;
+}
+
+///////////////////
+// Contact
+///////////////////
+
+label {
+	display: block;
+	margin-bottom: 2em;
+}
+
+input, textarea {
+	display: block;
+	font-size: 1.2em;
+	padding:.3em;
+	font-family: $sans;
+}
+
+textarea {
+	width: 96%;
+	height: 15em;
+	max-width: 28em;
+}
+
+.note {
+	font-size: .8em;
+	color: gray;
+	i {
+		margin-right: .3em;
+		color: #0070FF;
+	}
+
+}
+
+.contact-message {
+	margin-bottom: 1em;
+}
+
+///////////////////
+// About
+///////////////////
+
+.me {
+	width: 40%;
+	max-width: 200px;
+	float: left;
+	margin-right: 1em;
 }

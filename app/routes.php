@@ -96,7 +96,6 @@ Route::controller('user', 'UserController');
 # Filter for detect language
 Route::when('contact','detectLang');
 
-Route::get('/pricing', array('as' => 'pricing', 'uses' => 'PagesController@pricing'));
 Route::get('/testimonials', array('as' => 'testimonials', 'uses' => 'PagesController@testimonials'));
 Route::get('/examples', array('as' => 'examples', 'uses' => 'PagesController@examples'));
 Route::get('/about', array('as' => 'about', 'uses' => 'PagesController@about'));
@@ -113,6 +112,8 @@ Route::post('contact', function() {
     Mail::send('emails.contact', $data, function($message) use ($email, $data, $subject, $replyTo){
         $message->to($email)->from($email)->subject($subject)->replyTo($replyTo);
     });
+
+    return Redirect::route('contact')->with('success', Lang::get('messages.contactSuccess'));
 
 });
 

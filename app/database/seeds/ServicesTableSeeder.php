@@ -9,7 +9,7 @@ class ServicesTableSeeder extends Seeder {
 
         $services = array(
             array(
-                'name'      => 'Page Creation & Re-Creation',
+                'name'      => 'Website Design',
                 'description'      => 'I will work with you to create a brand new website or give new life to your current one. The end result will be a professionally built and designed website that is exciting for you and attractive to your Customers.',
                 'price'   => 99,
                 'unit'   => 'page',
@@ -19,7 +19,7 @@ class ServicesTableSeeder extends Seeder {
             ),
             array(
                 'name'      => 'On-Page SEO',
-                'description'      => 'description',
+                'description'      => "Industry standard, Google recommended SEO code will be integrated into your site. This will improve search engines' abilities to understand your site and improve the display of your search result listing. For more information, see <a href='//www.schema.org' target='_blank'>Schema.org</a>.",
                 'price'   => 49,
                 'unit'   => 'page',
                 'promise' => 'promise',
@@ -27,10 +27,19 @@ class ServicesTableSeeder extends Seeder {
                 'updated_at' => new DateTime,
             ),
             array(
-                'name'      => 'Regular Site Updates & Maintenance',
-                'description'      => 'description',
+                'name'      => 'Site Updates & Maintenance',
+                'description'      => "Don't let your site get stale! Regular updates to your site allow you to offer more timely and relevant information to your Customers. It's also great for SEO! Under the basic plan, I will update your site up to 4 times a month with information you provide.",
                 'price'   => 29,
                 'unit'   => 'month',
+                'promise' => 'promise',
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+            ),
+            array(
+                'name'      => 'CMS',
+                'description'      => "If you'd like your site to be easily updateable by you or your staff, I can make it happen. I will create a secure, intuitive way to update the content on your site whenever you want to.",
+                'price'   => 79,
+                'unit'   => 'page',
                 'promise' => 'promise',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime,

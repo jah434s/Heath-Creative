@@ -14,12 +14,13 @@
 	<label>
 		Your Email Address:
 		<input type="email" name="email" required autofocus />
+		<span class="note">NOTE: Your email address is private. <br />It will not be sold or shared with anyone.</span>
 	</label>
-	<label>
+	<label class="contact-message">
 		Message:
 		<textarea name="message" required></textarea>
 	</label>
-	<button type="Submit">Send Message</button>
+	<button type="Submit" class="primary-button">Send Message</button>
 {{ Form::close() }}
 
 @stop

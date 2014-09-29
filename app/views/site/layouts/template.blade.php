@@ -11,11 +11,11 @@
 		</title>
 		<meta name="keywords" content="" />
 		<meta name="author" content="Josh Heath" />
-		<meta name="description" content="Heath Creative provides expert quality custome websites at affordable prices." />
+		<meta name="description" content="{{ Config::get('site.company') }} provides expert quality custom websites at affordable prices." />
 
 		{{-- Mobile Specific Metas
 		================================================== --}}
-		<meta name="viewport" content="width=device-width, initial-scalwe=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		{{-- CSS
 		================================================== --}}

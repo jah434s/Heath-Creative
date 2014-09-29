@@ -1,8 +1,8 @@
 @extends('site.layouts.default')
 {{-- Web site Title --}}
 @section('title')
+About ::
 @parent
-About {{Config::get('site.company')}}
 @stop
 
 {{-- Content --}}
@@ -26,9 +26,18 @@ About {{Config::get('site.company')}}
 </ul>
 
 <h2>About Me</h2>
-<p>My name is Joshua Heath, and I have a passion for building websites. I started {{Config::get('site.company')}} for several reasons. First and foremost, I recognized a need for small businesses to gain access to professional quality Web Design. Web technology has advanced past the point where most businesses can reasonably compete with a self-made or auto-generated website, but professional Web Design firms are priced out of reach for many small businesses.</p>
+<script src="{{asset('assets/js/velocity.min.js')}}"></script>
 
-<p>My goal is to use my professional experience and expertise to create efficient, cost-effective Web Design processes that enable small businesses to serve and satisfy their Customers better than ever before. Call me a geek, but the idea of creating a better web for everyone is incredibly exciting to me.</p>
+<p>
+	<img src="{{asset('assets/img/me.jpg')}}" class="me" />
+	My name is Joshua Heath, and I have a passion for building websites. I started {{Config::get('site.company')}} for several reasons. First and foremost, I recognized a need for small businesses to gain access to professional quality Web Design. Web technology has advanced past the point where most businesses can reasonably compete with a self-made or auto-generated website, but professional Web Design firms are priced out of reach for many small businesses.
+</p>
 
-<p>If you'd like to know more about me, feel free to check me out on linkedin, or just {{link_to_route('contact', 'send me a message')}}.</p>
+<p>
+	My goal is to use my professional experience and expertise to create efficient, cost-effective Web Design processes that enable small businesses to serve and satisfy their Customers better than ever before. Call me a geek, but the idea of creating a better web for everyone is incredibly exciting to me.
+</p>
+
+<p>
+	If you'd like to know more about me, feel free to check me out on <a href="https://www.linkedin.com/profile/view?id=123200386" target="_blank">LinkedIn</a>, or just send me a {{link_to_route('contact', 'message')}}.
+</p>
 @stop
