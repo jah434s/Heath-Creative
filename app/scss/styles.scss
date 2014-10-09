@@ -63,19 +63,19 @@ p {
 	max-width: 38em;
 }
 
-button {
+button, .button {
 	cursor: pointer;
+	font-family: $sans;
+	border-radius: 4px;
 }
 
 .primary-button {
-	padding: .6em;
-	font-family: $sans;
 	background: $accent;
 	border: 1px solid $accent2;
-	border-radius: 3px;
 	color: white;
-	font-size: 1.2em;
 	display: inline-block;
+	padding: .6em;
+	font-size: 1.2em;
 	&:hover {
 		background: lighten($accent, 10%);
 		text-decoration: none;
@@ -85,6 +85,21 @@ button {
 	}
 	&:visited {
 		color: white;
+	}
+}
+
+.secondary-button {
+	background: #f3dcff;
+	border: 0;
+	color: $accent;
+	display: inline-block;
+	padding: .4em .5em;
+	&:hover {
+		background: lighten(#f3dcff, 2%);
+		text-decoration: none;
+	}
+	&:active {
+		background: darken(#f3dcff, 2%);
 	}
 }
 
@@ -311,30 +326,83 @@ footer {
 ///////////////////
 // Home
 ///////////////////
+
 .intro {
 	position: relative;
-	border: 1px solid #ccc;
-	margin: 0 0 1em;
-	overflow: hidden;
-	max-height: 2em;
-	padding: .5em .5em 0;
-	transition: max-height .4s;
-	border-radius: 4px;
-	&.is-open {
-		padding-bottom: 4em;
-		max-height: 11em;
-	}
-	/*
-	h2 {
-		color: white;
-	}
-	&:nth-child(2n) {
-		background: white;
-		h2 {
-			color: $secondary;
+	@media (max-width: $navSwitch1) {
+		position: relative;
+		border: 1px solid #ccc;
+		margin: 0 0 1em;
+		overflow: hidden;
+		max-height: 2.2em;
+		padding: .5em .5em 0;
+		transition: max-height .4s;
+		border-radius: 4px;
+		&.is-open {
+			padding-bottom: 4em;
+			max-height: 15em;
+			&:hover {
+				background: #fff;
+			}
+		}
+		& > a:hover {
+			text-decoration: none;
+		}
+		& > i {
+			position: absolute;
+			right: .5em;
+			top: .3em;
+			font-size: 1.6em;
+			color: $primary; 
+		}
+		&:hover {
+			background: #eee;
 		}
 	}
-	*/
+	@media (min-width: $navSwitch1) {
+		background: $secondary;
+		padding: 1em 1em 1em 11em;
+		[data-accordion="toggle"]:before {
+			display: none;
+		}
+		i {
+			position: absolute;
+			left: .2em;
+			top: .2em;
+			font-size: 8em;
+		}
+		h2, p, i {
+			color: white;
+		}
+
+		&:nth-child(2n + 1) {
+			background: white;
+			padding: 1em 11em 1em 1em;
+			i {
+				left: auto;
+				right: .2em;
+			}
+			h2, p, i {
+				color: $secondary;
+			}
+		}
+	}
+}
+
+#me {
+	& > i {
+		font-size: 1.7em;
+		@media (min-width: $navSwitch1) {
+			font-size: 8em;
+		}
+	}
+
+}
+
+#contact {
+	& > i {
+		font-size: 1.5em;
+	}
 }
 
 .intro-cta {

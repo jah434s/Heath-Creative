@@ -8,33 +8,37 @@ Home
 {{-- Content --}}
 @section('content')
 <h1>Web Design for Everyone</h1>
-<section class='intro' data-accordion="container">
-	<h2 data-accordion="toggle" data-accordion-content>What I Do</h2>
-	<p data-accordion-content>
-		{{Config::get('site.company')}} specializes in creating professional-grade, cost-efficient websites for small businesses. That means I can build you the site you want for less than you'd expect. I understand if you're skeptical. See for yourself!
-		<a href="{{{ URL::to('services') }}}" class="intro-cta">Services &amp; Pricing</a>
+<section id="work" class='intro' data-accordion="container">
+	<h2 data-accordion="toggle">What I Do</h2>
+	<p>
+		{{Config::get('site.company')}} specializes in creating professional-grade, cost-efficient websites for small businesses. That means I can build you the site you want for less than you'd expect. Not sure? See for yourself!
 	</p>
+	<a href="{{{ URL::to('services') }}}" class="intro-cta button secondary-button">Services &amp; Pricing</a>
+	<i class="fa fa-wrench"></i>
 </section>
-<section class="intro" data-accordion="container">
-	<h2 data-accordion="toggle" data-accordion-content>Examples</h2>
-	<ol data-accordion-content>
+<section id="examples" class="intro" data-accordion="container">
+	<h2 data-accordion="toggle">Examples</h2>
+	<ol>
 		<li>Site 1</li>
 		<li>Site 2</li>
 		<li>Site 3</li>
 	</ol>
+	<a href="{{{ URL::to('examples') }}}" class="intro-cta button secondary-button">More Examples</a>
+	<i class="fa fa-desktop"></i>
 </section>
-<section class="intro" data-accordion="container">
-<h2 data-accordion="toggle" data-accordion-content>Who I Am</h2>
-<p data-accordion-content>
-	Whatever your website needs, {{Config::get('site.company')}} has the experience and expertise to get it done how you want it, when you want it. Take a look at our {{ link_to_route('services', 'services')}} or request a free, no-obligation quote.
+<section id="me" class="intro" data-accordion="container">
+<h2 data-accordion="toggle">Who I Am</h2>
+<p>
+	My name is Josh, and I invented the internet. OK, not really, but I do know a lot about the web and how to build successful websites. I bring a ton of experience to the table that allows me to get things done, and get them done right.
 </p>
+<a href="{{URL::to('about')}}" class="intro-cta button secondary-button">More about me</a>
+<i class="fa fa-user"></i>
 </section>
-<section class="intro" data-accordion="container">
-<h2 data-accordion="toggle" data-accordion-content>Contact Me</h2>
-<p data-accordion-content>
-	If you've just got some questions or want to get to know me better, feel free to {{  link_to_route('contact', 'contact me')}}.
-</p>
-<a href="URL::to('contact')" class="intro-cta">Send me a message</a>
+<section id="contact" class="intro">
+<a href="{{URL::to('contact')}}">
+	<h2>Contact Me</h2>
+</a>
+<i class="fa fa-envelope"></i>
 </section>
 
 @stop
