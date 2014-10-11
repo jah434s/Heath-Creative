@@ -59,6 +59,10 @@
 
 			@yield('content')
 
+			<a href="{{URL::to('contact')}}" class="button primary-button contact-button">
+				<i class="fa fa-envelope"> </i>Contact Me
+			</a>
+			
 		</main>
 		<footer>
 			<small>&copy;{{date('Y')}} {{Config::get('site.company')}}. All rights reserved.</small>

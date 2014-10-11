@@ -14,7 +14,6 @@ Home
 		{{Config::get('site.company')}} specializes in creating professional-grade, cost-efficient websites for small businesses. That means I can build you the site you want for less than you'd expect. Not sure? See for yourself!
 	</p>
 	<a href="{{{ URL::to('services') }}}" class="intro-cta button secondary-button">Services &amp; Pricing</a>
-	<i class="fa fa-wrench"></i>
 </section>
 <section id="examples" class="intro" data-accordion="container">
 	<h2 data-accordion="toggle">Examples</h2>
@@ -24,7 +23,6 @@ Home
 		<li>Site 3</li>
 	</ol>
 	<a href="{{{ URL::to('examples') }}}" class="intro-cta button secondary-button">More Examples</a>
-	<i class="fa fa-desktop"></i>
 </section>
 <section id="me" class="intro" data-accordion="container">
 <h2 data-accordion="toggle">Who I Am</h2>
@@ -32,13 +30,6 @@ Home
 	My name is Josh, and I invented the internet. OK, not really, but I do know a lot about the web and how to build successful websites. I bring a ton of experience to the table that allows me to get things done, and get them done right.
 </p>
 <a href="{{URL::to('about')}}" class="intro-cta button secondary-button">More about me</a>
-<i class="fa fa-user"></i>
-</section>
-<section id="contact" class="intro">
-<a href="{{URL::to('contact')}}">
-	<h2>Contact Me</h2>
-</a>
-<i class="fa fa-envelope"></i>
 </section>
 
 @stop

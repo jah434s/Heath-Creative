@@ -10,7 +10,7 @@ class ServicesTableSeeder extends Seeder {
         $services = array(
             array(
                 'name'      => 'Website Design',
-                'description'      => 'I will work with you to create a brand new website or give new life to your current one. The end result will be a professionally built and designed website that is exciting for you and attractive to your Customers.',
+                'description'      => 'I will work with you to create a brand new website or update your current one. The end result will be a professionally built and designed website that is exciting for you and attractive to your Customers.',
                 'price'   => 99,
                 'unit'   => 'page',
                 'promise' => 'promise',
@@ -27,7 +27,7 @@ class ServicesTableSeeder extends Seeder {
                 'updated_at' => new DateTime,
             ),
             array(
-                'name'      => 'Site Updates & Maintenance',
+                'name'      => 'Site Management',
                 'description'      => "Don't let your site get stale! Regular updates to your site allow you to offer more timely and relevant information to your Customers. It's also great for SEO! Under the basic plan, I will update your site up to 4 times a month with information you provide.",
                 'price'   => 29,
                 'unit'   => 'month',
