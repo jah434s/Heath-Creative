@@ -30,7 +30,7 @@ About ::
 
 <p>
 	<img src="{{asset('assets/img/me.jpg')}}" class="me" />
-	My name is Joshua Heath, and I have a passion for building websites. I started {{Config::get('site.company')}} for several reasons. First and foremost, I recognized a need for small businesses to gain access to professional quality Web Design. Web technology has advanced past the point where most businesses can reasonably compete with a self-made or auto-generated website, but professional Web Design firms are priced out of reach for many small businesses.
+	My name is Joshua Heath, and I have a passion for building websites. I started {{Config::get('site.company')}} for several reasons. First and foremost, I recognized a need for small businesses to gain access to professional quality Web Design. Because most professional Web Design firms are priced out of reach for many small businesses, the only alternative is to use cheap services that auto-generate websites. These sites often lack attention to usability and professionalism, and can turn Customers off or even confuse them. I think the small business community can do better.
 </p>
 
 <p>

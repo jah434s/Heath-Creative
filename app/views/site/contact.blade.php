@@ -14,7 +14,12 @@
 	<label>
 		Your Email Address:
 		<input type="email" name="email" required autofocus />
-		<span class="note">NOTE: Your email address is private. <br />It will not be sold or shared with anyone.</span>
+		<span class="note">Your email address is private; it will not be sold or shared with anyone.</span>
+	</label>
+	<label>
+		Your Current Website: 
+		<input type="text" name="site" />
+		<span class="note">(optional)</span>
 	</label>
 	<label class="contact-message">
 		Message:

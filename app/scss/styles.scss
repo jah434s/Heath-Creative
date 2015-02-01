@@ -92,17 +92,17 @@ button, .button {
 }
 
 .secondary-button {
-	background: #f3dcff;
+	background: #f7ecfd;
 	border: 1px solid;
 	color: $accent;
 	display: inline-block;
 	padding: .4em .5em;
 	&:hover {
-		background: lighten(#f3dcff, 2%);
+		background: lighten(#f7ecfd, 2%);
 		text-decoration: none;
 	}
 	&:active {
-		background: darken(#f3dcff, 2%);
+		background: darken(#f7ecfd, 2%);
 	}
 }
 
@@ -163,6 +163,16 @@ button, .button {
 	border-color: $infoDark;
 	i, .alert-close, .alert-heading {
 		color: $infoDark;
+	}
+}
+
+.note {
+	font-size: .8em;
+	color: gray;
+	clear: both;
+	i {
+		margin-right: .3em;
+		color: #0070FF;
 	}
 }
 
@@ -294,7 +304,7 @@ header {
 }
 
 main {
-	padding: .5em .0 4em;
+	padding: .5em;
 	@extend %clearfix;
 }
 
@@ -323,11 +333,14 @@ footer {
 			content: "\f068";
 		}
 	}
+	@media (min-width: $navSwitch1) {
+		cursor: default;
+	}
 }
 
 .contact-button {
 	max-width: 20em;
-	margin: 0 auto;
+	margin: 1em auto;
 	display: block;
 	text-align: center;
 }
@@ -337,7 +350,6 @@ footer {
 ///////////////////
 
 .intro {
-	position: relative;
 	@media (max-width: $navSwitch1) {
 		position: relative;
 		border: 1px solid #ccc;
@@ -367,32 +379,17 @@ footer {
 		}
 	}
 	@media (min-width: $navSwitch1) {
-		background: $secondary;
-		padding: 1em 1em 1em 11em;
+		border-bottom: 1px solid $primary;
+		margin: 0 auto 1em;
+		max-width: 38em;
+		padding: 0 0 1em;
 		[data-accordion="toggle"]:before {
 			display: none;
 		}
-		i {
-			position: absolute;
-			left: .2em;
-			top: .2em;
-			font-size: 8em;
-		}
-		h2, p, i {
-			color: white;
-		}
-
-		&:nth-child(2n + 1) {
-			background: white;
-			padding: 1em 11em 1em 1em;
-			i {
-				left: auto;
-				right: .2em;
-			}
-			h2, p, i {
-				color: $secondary;
-			}
-		}
+	}
+	@media (min-width: $navSwitch2) {
+		width: 50%;
+		display: inline-block;
 	}
 }
 
@@ -414,6 +411,11 @@ footer {
 		transform: translate3d(0,0,0);
 		transition: transform .6s linear;
 	}
+	@media (min-width: $navSwitch1) {
+		transform: translate3d(0,0,0);
+		position: static;
+		float: right;
+	}
 }
 
 ///////////////////
@@ -433,28 +435,36 @@ footer {
 		max-height: 22em;
 		padding-bottom: 3.5em;
 	}
+	&:last-of-type {
+		min-height: 0;
+		padding-bottom: 0;
+		@media (min-width: $navSwitch1) {
+			border-bottom: 0;
+		}
+		.service-price-block {
+			display: none;
+		}
+	}
 	@media (min-width: $navSwitch1) {
 		max-height: none;
 		padding-bottom: 3.5em;
 		border-color: $primary;
 		border-width: 0 0 1px 0;
+		border-radius: 0;
 
 	}
 	@media (min-width: $serviceSwitch) {
 		float: left;
 		width: 46%;
-		min-height: 16.25em;
+		min-height: 16.05em;
 		margin: 0 2% 1.5em;
-		border-width: 0;
 		& + .service {
 			padding-top: 0;
-		}
-		&:nth-of-type(2n) {
-			//border-left-width: 1px;
 		}
 	}
 	@media (min-width: 70em) {
 		width: 29%;
+		min-height: 17.55em;
 	}
 }
 
@@ -498,9 +508,25 @@ footer {
 	display: none;
 }
 
+[data-page="services"] {
+	.note {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
 ///////////////////
 // Contact
 ///////////////////
+
+[data-page="contact"] {
+	max-width: 35em;
+	margin: 0 auto;
+	padding-bottom: 2em;
+	& ~ .contact-button {
+		display: none;
+	}
+}
 
 label {
 	display: block;
@@ -520,16 +546,6 @@ textarea {
 	max-width: 28em;
 }
 
-.note {
-	font-size: .8em;
-	color: gray;
-	i {
-		margin-right: .3em;
-		color: #0070FF;
-	}
-
-}
-
 .contact-message {
 	margin-bottom: 1em;
 }
@@ -543,4 +559,9 @@ textarea {
 	max-width: 200px;
 	float: left;
 	margin-right: 1em;
+}
+
+[data-page="about"] {
+	max-width: 38em;
+	margin: 0 auto;
 }

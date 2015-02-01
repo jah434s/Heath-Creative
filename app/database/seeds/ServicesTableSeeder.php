@@ -44,7 +44,15 @@ class ServicesTableSeeder extends Seeder {
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime,
             ),
-            
+            array(
+                'name'      => 'More...',
+                'description'      => "Whatever you want, chances are I can make it happen. Let me know what you're looking for, and I can quote you a customized price.",
+                'price'   => '',
+                'unit'   => '',
+                'promise' => 'promise',
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+            ),
         );
 
         DB::table('services')->insert( $services );

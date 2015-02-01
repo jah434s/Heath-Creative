@@ -53,17 +53,16 @@
 			<!--<span id="tag-line">Professional, Affordable Websites.</span>-->
 			@include('site/shared/navigation')
 		</header>
-		<main data-page="">
+		<main data-page="{{ $page }}">
 			
 			@include('notifications')
 
 			@yield('content')
 
-			<a href="{{URL::to('contact')}}" class="button primary-button contact-button">
-				<i class="fa fa-envelope"> </i>Contact Me
-			</a>
-			
 		</main>
+		<a href="{{URL::to('contact')}}" class="button primary-button contact-button">
+			<i class="fa fa-envelope"> </i>Contact Me
+		</a>
 		<footer>
 			<small>&copy;{{date('Y')}} {{Config::get('site.company')}}. All rights reserved.</small>
 		</footer>

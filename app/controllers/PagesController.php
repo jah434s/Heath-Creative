@@ -21,26 +21,33 @@ class PagesController extends BaseController {
 
     public function index()
     {
+        $page = 'home';
+        View::share('page', $page);
+        
         return View::make('site/home');
-    }
-
-    public function pricing()
-    {
-        return View::make('site/pricing');
     }
 
     public function testimonials()
     {
+        $page = 'testimonials';
+        View::share('page', $page);
+
         return View::make('site/testimonials');
     }
 
     public function examples()
     {
+        $page = 'examples';
+        View::share('page', $page);
+        
         return View::make('site/examples');
     }
 
     public function about()
     {
+        $page = 'about';
+        View::share('page', $page);
+        
         return View::make('site/about');
     }
 
@@ -48,6 +55,9 @@ class PagesController extends BaseController {
     {
         // Get all the services
         $services = $this->service->orderBy('created_at', 'DESC')->get();
+        
+        $page = 'services';
+        View::share('page', $page);
 
         // Show the page
         return View::make('site/services', compact('services'));
@@ -55,6 +65,9 @@ class PagesController extends BaseController {
 
     public function contact()
     {
+        $page = 'contact';
+        View::share('page', $page);
+        
         return View::make('site/contact');
     }
 

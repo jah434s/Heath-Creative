@@ -10,11 +10,17 @@ Services
 
 <h1>Services & Pricing</h1>
 
+
+
+<!--
+
 <div class="alert info">
 	<button type="button" class="alert-close" data-dismiss="alert">&times;</button>
 	<h4 class="alert-heading"><i class="fa fa-info-circle"></i>Info</h4>
 	Prices are based on the estimated time necessary to complete the work. Actual prices for your project may be higher or lower, depending on complexity. The final cost will be calculated and agreed upon work begins. 
 </div>
+
+-->
 
 @foreach ($services as $service)
 	<div class="service" data-accordion="container">
@@ -27,5 +33,9 @@ Services
 		<p class="service-promise">{{$service->promise}}</p>
 	</div>
 @endforeach
+
+<p class="note">
+	<i class="fa fa-info-circle"></i> NOTE: Prices are based on the estimated time necessary to complete the work. Actual prices for your project may be higher or lower, depending on complexity. The final cost will be calculated and agreed upon before work begins.
+</p>
 
 @stop
